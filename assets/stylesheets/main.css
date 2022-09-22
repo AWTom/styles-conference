@@ -205,6 +205,7 @@ nav > a:active > span {
 
 footer {
 	padding-block: 44px;
+	flex-direction: row-reverse;
 }
 
 footer > nav {
