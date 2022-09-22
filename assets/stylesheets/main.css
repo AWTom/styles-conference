@@ -14,6 +14,7 @@ body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	max-width: 960px;
+	margin-inline: auto;
 }
 
 		/* Flex */
@@ -33,14 +34,6 @@ body > header:first-child {
 body > header:first-child,
 body > footer:last-child {
 	display: flex;
-}
-
-body > header:first-child a {
-	color: #fff;
-}
-
-body > header:first-child a:hover {
-	color: #648880;
 }
 
 		/* Typography */
@@ -90,7 +83,7 @@ a {
 a:hover,
 a:hover > h1,
 a:hover > h3 {
-	color: #a9b2b9;
+	color: #648880;
 }
 
 a.btn,
@@ -146,17 +139,25 @@ nav a {
 	display: flex;
 }
 
+.teaser a:hover h3 {
+	color: #a9b2b9;
+}
+
 .teaser h5 {
 	text-transform: uppercase;
 }
 
 		/* Header */
 
-.header-info {
-	margin-inline: 1.375rem;
+a.logo {
+	color: #fff;
 }
 
-.logo {
+a.logo:hover {
+	color: #648880;
+}
+
+h1.logo {
 	color: inherit;
 	padding-block-start: 1em;
 	border-block-start: 0.25rem solid #648880;
@@ -181,17 +182,18 @@ nav a {
 
 		/* Nav */
 
-nav {
+.primary-nav {
 	display: flex;
 }
 
-nav > a {
+.primary-nav a {
+	color: #fff;
 	padding: 0 0.25em;
 	display: flex;
 	justify-content: center;
 }
 
-nav > a::before {
+.primary-nav a::before {
 	content: attr(hover);
 	text-transform: uppercase;
 	font-weight: 800;
@@ -202,12 +204,13 @@ nav > a::before {
 	transform: rotateX(-90deg) translateZ(0.5em);
 }
 
-nav > a:hover::before,
-nav > a:active::before {
+.primary-nav a:hover::before,
+.primary-nav a:active::before {
+	color: #648880;
 	transform: rotateX(0deg) translateZ(0.5em);
 }
 
-nav > a > span {
+.primary-nav a > span {
 	text-transform: uppercase;
 	line-height: 1;
 	display: inline-block;
@@ -215,10 +218,20 @@ nav > a > span {
 	transform: rotateX(0deg) translateZ(0.5em);
 }
 
-nav > a:hover > span,
-nav > a:active > span {
+.primary-nav a:hover > span,
+.primary-nav a:active > span {
+	color: #648880;
 	transform: rotateX(90deg) translateZ(0.5em);
 }
+
+.primary-nav ul {
+	padding: 0;
+	margin: 0;
+}
+
+.primary-nav li {
+	display: inline-block;
+} 
 
 		/* Footer */
 
