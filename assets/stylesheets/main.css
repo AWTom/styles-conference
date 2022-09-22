@@ -9,6 +9,7 @@
 		/* Main */
 
 body {
+	background: #293f50;
 	color: #888;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 	font-weight: 300;
@@ -18,21 +19,28 @@ body {
 		/* Flex */
 
 body > * {
-	margin: 0 auto;
-	margin-inline: 2rem;
+	padding-inline: 4rem;
 }
 
-header {
-    position: sticky;
-    top: -2.75rem;
-    border-block-end: 1px solid #648880;
-    padding-block-end: 1rem;
-    background: #FFF;
+body > header:first-child {
+	position: sticky;
+	top: -2.75rem;
+	padding-block-end: 1rem;
+	border-block-end: 1px solid #fff;
+	background: #293f50;
 }
 
-header,
-footer {
+body > header:first-child,
+body > footer:last-child {
 	display: flex;
+}
+
+body > header:first-child a {
+	color: #fff;
+}
+
+body > header:first-child a:hover {
+	color: #648880;
 }
 
 		/* Typography */
@@ -87,7 +95,7 @@ a:hover > h3 {
 
 a.btn,
 .teaser a,
-header a,
+header:first-child a,
 nav a {
 	text-decoration-line: none;
 }
@@ -95,8 +103,11 @@ nav a {
 		/* Buttons */
 
 .btn {
-	border-radius: 0.3125em;
+	text-transform: uppercase;
+	color: #fff;
+	cursor: pointer;
 	display: inline-block;
+	border-radius: 0.3125em;
 	margin: 0;
 }
 
@@ -105,9 +116,15 @@ nav a {
 	padding: 1em 2em;
 }
 
+.btn-alt:hover {
+	background: #fff;
+	color: #648880;
+}
+
 		/* Home */
 
 .hero {
+	color: #fff;
 	padding: 1em 80px 2em 80px;
 	text-align: center;
 }
@@ -125,21 +142,25 @@ nav a {
     font-weight: 200;
 }
 
+.teaser {
+	display: flex;
+}
+
 .teaser h5 {
 	text-transform: uppercase;
 }
 
 		/* Header */
 
-.logo,
 .header-info {
 	margin-inline: 1.375rem;
 }
 
 .logo {
+	color: inherit;
 	padding-block-start: 1em;
 	border-block-start: 0.25rem solid #648880;
-	margin-block: 0;
+	margin: 0;
 	text-transform: uppercase;
 	font-size: 3em;
 	line-height: 0.9;
@@ -172,7 +193,6 @@ nav > a {
 
 nav > a::before {
 	content: attr(hover);
-	color: #a9b2b9;
 	text-transform: uppercase;
 	font-weight: 800;
 	line-height: 1;
@@ -188,7 +208,6 @@ nav > a:active::before {
 }
 
 nav > a > span {
-	color: #648880;
 	text-transform: uppercase;
 	line-height: 1;
 	display: inline-block;
@@ -203,22 +222,41 @@ nav > a:active > span {
 
 		/* Footer */
 
-footer {
+body > footer:last-child {
+	color: #648880;
 	padding-block: 44px;
 	flex-direction: row-reverse;
 }
 
-footer > nav {
-	margin: auto;
-}
-
-		/* Body */
+		/* Rows */
 
 .row {
-	display: flex;
+	background: #fff;
+	padding-block: 2em 2em;
 }
 
-.row,
+.row-alt h2 {
+	white-space: nowrap;
+	text-align: center;
+	font-size: 2em;
+	margin-block-start: 0;
+	background: #648880;
+	background: -webkit-linear-gradient(#ff6666, #6666ff);
+	background: -moz-linear-gradient(#ff6666, #6666ff);
+	background: linear-gradient(#ff6666, #6666ff);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+.row p {
+	margin-block-end: 0.25em;
+}
+
+.row-alt p {
+	text-align: center;
+}
+
 .row > section {
 	padding-inline: 15px;
 	flex: 200px;
