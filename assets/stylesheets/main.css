@@ -74,6 +74,16 @@ strong {
 	font-weight: 400;
 }
 
+.wave {
+	background: #648880;
+	background: -webkit-linear-gradient(#ff6666, #6666ff);
+	background: -moz-linear-gradient(#ff6666, #6666ff);
+	background: linear-gradient(#ff6666, #6666ff);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
 		/* Links */
 
 a {
@@ -229,13 +239,6 @@ header+.row-alt {
 	white-space: nowrap;
 	font-size: 2em;
 	margin-block-start: 0;
-	background: #648880;
-	background: -webkit-linear-gradient(#ff6666, #6666ff);
-	background: -moz-linear-gradient(#ff6666, #6666ff);
-	background: linear-gradient(#ff6666, #6666ff);
-	background-clip: text;
-	-webkit-background-clip: text;
-	color: transparent;
 }
 
 .row p {
@@ -321,12 +324,18 @@ header+.row-alt {
 	margin-block-end: 1em;
 }
 
-.row a:hover h3 {
-	color: #a9b2b9;
-}
-
 .hover-container:hover p {
 	transform: translate(-150%, -50%) rotateY(-90deg);
+}
+
+.hover-container h3 {
+	color: #648880;
+	transition: 1s;
+}
+
+.hover-container:hover h3 {
+	color: transparent;
+	font-weight: 900;
 }
 
 .hover-img {
