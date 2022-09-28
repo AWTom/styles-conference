@@ -324,6 +324,10 @@ body > footer:last-child {
 	color: #a9b2b9;
 }
 
+.hover-container:hover p {
+	transform: rotateY(-90deg) translateX(-125px) translateZ(125px);
+}
+
 .hover-img {
 	margin-inline: 1em;
 	height: 10em;
@@ -338,10 +342,6 @@ body > footer:last-child {
 	transition: 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 	transform-style: preserve-3d;
 	backface-visibility: hidden;
-}
-
-.hover-img:hover p {
-	transform: rotateY(-90deg) translateX(-125px) translateZ(125px);
 }
 
 .hover-img img {
