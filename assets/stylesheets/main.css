@@ -213,11 +213,11 @@ body > footer:last-child {
 
 .row {
 	background: #fff;
-	padding-block: 2em 2em;
 }
 
 .row-alt:first-of-type {
 	text-align: center;
+	padding-block: 2em;
 }
 
 .row-alt {
@@ -246,7 +246,8 @@ body > footer:last-child {
 }
 
 .row > section {
-	padding-inline: 1em;
+	padding-inline: 0.809em;
+	padding-block: 1.5em;
 	flex: 200px;
 }
 
@@ -262,7 +263,7 @@ body > footer:last-child {
 
 .hero {
 	color: #fff;
-	padding: 1em 80px 2em 80px;
+	padding: 1em 5em 2em 5em;
 	text-align: center;
 }
 
@@ -279,8 +280,8 @@ body > footer:last-child {
     font-weight: 200;
 }
 
-.teaser-bg,
-.teaser-band,
+.row-decoration,
+.row-decoration-gap,
 .teaser {
 	border-start-start-radius: 2em 7em;
 	border-start-end-radius: 2em 7em;
@@ -288,66 +289,75 @@ body > footer:last-child {
 	border-end-end-radius: 2em 7em;
 }
 
-.teaser-bg {
+.row-decoration {
 	background-color: #fff;
 	padding-inline: 0.5em;
 }
 
-.teaser-band {
+.row-decoration-gap {
 	background-color: #293f50;
 	padding-inline: 0.809em; /* Golden ratio * 0.5 */
 	display: flex;
 }
 
-.teaser-band .teaser-band {
+.row-decoration-gap .row-decoration-gap {
 	padding-inline: 0.809em;
+	padding-block: 0;
 	margin-inline: -1em;
 }
 
-.teaser-band > * {
+.row-decoration-gap .row-decoration-gap > section {
+	padding-inline: 0;
+	padding-block: 1.5em;
+}
+
+.row-decoration-gap > * {
 	flex-basis: 100%;
 }
 
 .teaser {
 	display: flex;
-}
-
-.teaser.row {
-	/* padding: 0; */
+	flex-basis: 100%;
 }
 
 .teaser section {
 	text-align: center;
 }
 
-.teaser a:hover h3 {
+.teaser h3 {
+	margin-block-end: 1em;
+}
+
+.row a:hover h3 {
 	color: #a9b2b9;
 }
 
 .hover-container:hover p {
-	transform: rotateY(-90deg) translateX(-125px) translateZ(125px);
+	transform: translate(-150%, -50%) rotateY(-90deg);
 }
 
 .hover-img {
-	margin-inline: 1em;
 	height: 10em;
 	perspective: 250px;
 }
 
 .hover-img p {
-	margin-block: 0 2em;
-	margin-inline: 0.25em;
-	padding-block-start: 2em;
+	top: 50%;
+	left: 50%;
+	width: 250px;
+	margin: 0;
 	position: absolute;
 	transition: 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+	transform-origin: right;
 	transform-style: preserve-3d;
+	transform: translate(-50%, -50%);
 	backface-visibility: hidden;
 }
 
 .hover-img img {
 	position: absolute;
 	width: 75%;
-	top: 0;
+	top: -50%;
 	left: 100%;
 	transform-origin: left;
 	transform: rotateY(90deg) translateX(16.667%); /* (left - width) / 2 / width */
@@ -368,11 +378,11 @@ body > footer:last-child {
 }
 
 .speaker-info {
-	margin: 0.25em 4em 1.5em 4em;
+	margin-inline: 1.5em;
 }
 
 .speaker-info h2 {
-	margin-block-end: 0;
+	margin: 0;
 }
 
 .speaker-info h5 {
@@ -386,21 +396,22 @@ body > footer:last-child {
 }
 
 .speaker-socials {
-	padding-block-end: 1em 0;
+	padding-block-end: 1em;
 	border: 1px solid #a9b2b9;
 	border-start-start-radius: 2em 7em;
 	border-start-end-radius: 2em 7em;
 	border-end-start-radius: 2em 7em;
 	border-end-end-radius: 2em 7em;
 	margin-block-start: 4em;
-	margin-inline: 2em;
+	margin-inline: 1.5em 3em;
 	text-align: center;
 }
 
 .speaker-socials img {
 	border: 1px solid #a9b2b9;
-	margin: -1px;
 	margin-block-start: -2px;
+	margin-inline: -10px; /* Centers img */
+	width: 101%; /* Gets rid of tiny gap */
 	border-start-start-radius: 2em 7em;
 	border-start-end-radius: 2em 7em;
 	border-end-start-radius: 2em 7em;
@@ -410,4 +421,26 @@ body > footer:last-child {
 .speaker-socials ul {
 	list-style-type: none;
 	padding-inline-start: 0;
+}
+
+		/* Venue */
+
+.venue-theatre {
+	display: flex;
+}
+
+.venue-hotel {
+	padding-block-end: 1em;
+	display: flex;
+}
+
+.venue-info {
+}
+
+.venue-info p {
+	text-align: start;
+}
+
+.venue-map {
+	height: 264px;
 }
