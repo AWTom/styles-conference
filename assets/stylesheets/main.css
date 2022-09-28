@@ -222,6 +222,7 @@ body > footer:last-child {
 
 .row-alt {
 	margin-block-start: 3em;
+	padding-block: 3em;
 }
 
 .row-alt h2 {
@@ -245,18 +246,12 @@ body > footer:last-child {
 	text-align: center;
 }
 
-.row > section {
-	padding-inline: 0.809em;
-	padding-block: 1.5em;
-	flex: 200px;
-}
-
 .col-1-3 {
-	flex: 1 150px;
+	flex: 1;
 }
 
 .col-2-3 {
-	flex: 2 150px;
+	flex: 2;
 }
 
 		/* Home */
@@ -297,7 +292,6 @@ body > footer:last-child {
 .row-decoration-gap {
 	background-color: #293f50;
 	padding-inline: 0.809em; /* Golden ratio * 0.5 */
-	display: flex;
 }
 
 .row-decoration-gap .row-decoration-gap {
@@ -311,17 +305,16 @@ body > footer:last-child {
 	padding-block: 1.5em;
 }
 
-.row-decoration-gap > * {
-	flex-basis: 100%;
-}
-
 .teaser {
+	background: #fff;
 	display: flex;
-	flex-basis: 100%;
 }
 
-.teaser section {
+.teaser > section {
 	text-align: center;
+	padding-inline: 0.809em;
+	padding-block: 1.5em;
+	flex: 200px;
 }
 
 .teaser h3 {
@@ -374,11 +367,10 @@ body > footer:last-child {
 .speaker {
 	display: flex;
 	padding-inline: 0;
-	margin-inline: -4em;
 }
 
 .speaker-info {
-	margin-inline: 1.5em;
+	margin-inline: 0 1.5em;
 }
 
 .speaker-info h2 {
@@ -403,7 +395,7 @@ body > footer:last-child {
 	border-end-start-radius: 2em 7em;
 	border-end-end-radius: 2em 7em;
 	margin-block-start: 4em;
-	margin-inline: 1.5em 3em;
+	margin-inline: 1.5em 0;
 	text-align: center;
 }
 
@@ -427,14 +419,11 @@ body > footer:last-child {
 
 .venue-theatre {
 	display: flex;
+	padding-block-end: 3em;
 }
 
 .venue-hotel {
-	padding-block-end: 1em;
 	display: flex;
-}
-
-.venue-info {
 }
 
 .venue-info p {
@@ -443,4 +432,66 @@ body > footer:last-child {
 
 .venue-map {
 	height: 264px;
+}
+
+		/* Register */
+
+.register {
+	display: flex;
+}
+
+.register p {
+	text-align: left;
+	padding-inline-end: 3em;
+}
+
+.why-attend {
+	list-style: square;
+	margin: 0 0 1em 2em;
+}
+
+.form {
+	margin-block-end: 2em;
+}
+
+.register-group {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+.register-group label {
+	color: #648880;
+	cursor: default;
+}
+
+.register-group input,
+.register-group select,
+.register-group textarea {
+	border: 1px solid #c6c9cc;
+	border-radius: 5px;
+	color: #888;
+	display: block;
+	margin: 0.25em 0 2em 0;
+	padding: 0.25em 0.5em;
+}
+
+.register-group input,
+.register-group textarea {
+	width: 100%;
+}
+
+.register-group textarea {
+	height: 6em;
+}
+
+.btn-default {
+	border: 0;
+	background: #648880;
+	padding: 11px 30px;
+	font-size: 14px;
+}
+
+.btn-default:hover {
+	background: #77a198;
 }
